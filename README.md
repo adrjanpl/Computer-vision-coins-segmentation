@@ -27,8 +27,8 @@ The program combines circle detection with feature matching algorithms to recogn
    * `0.5Orzel.jpg`, `0.5Reszka.jpg`
    * `0.2Orzel.jpg`, `0.2Reszka.jpg`
    * `0.01Orzel.jpg`, `0.01Reszka.jpg`
-3. Add your target photo containing coins (e.g., `IMG_0408.jpg`).
-4. Run the notebook `zaliczenieWIDZKOMP.ipynb`.
+3. Add your target photo containing coins.
+4. Run the notebook `CoinRecog.ipynb`.
 5. Check the annotated output image and the total counted sum displayed in the console and image header.
 
 ## Key Features & Results
@@ -43,15 +43,16 @@ During calibration, coin pixel radii were categorized into ranges:
 | **20 gr**    | $29 \le r < 32$      | Assumed 20 gr     |
 | **1 gr**     | $r < 29$             | Assumed 1 gr      |
 
+<img width="600" height="337" alt="1" src="https://github.com/user-attachments/assets/ae9671cb-23ca-44ec-8ad3-b6eb80f422de" />
+
+
 ### Detection Visual Output
 * **High Confidence (Green):** Verified by both Hough circle size and SIFT feature matching (points $\ge 8$).
 * **Fallback Estimate (Orange with `?`):** Triggered when feature points are low, falling back to the most likely denomination by size.
 * **Header Display:** The final total (e.g. `SUMA: 1.01 zl`) is drawn directly onto the top-left corner of the result image.
 
-<!-- Replace these placeholder image links with screenshots from your project -->
-<!-- Example:
-* <img width="600" alt="coin_detection_result" src="https://github.com/your-username/your-repo/assets/example.jpg" />
--->
+<img width="600" height="337" alt="2" src="https://github.com/user-attachments/assets/a29d79d9-4b27-4572-a386-5e0d9bdd3dbb" />
+
 
 ## Notes & Limitations
 * Camera distance and angle should remain relatively consistent for the pixel radius thresholds to remain valid.
